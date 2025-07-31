@@ -1,0 +1,90 @@
+.services {
+  background: #0f172a;
+}
+
+.services-content {
+  max-width: 1232px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  padding: 40px;
+  position: relative;
+}
+
+.service-card.popular {
+  border: 2px solid #3b82f6;
+  transform: scale(1.02);
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.service-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.popular-badge {
+  background: #dbeafe;
+  color: #2563eb;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.service-features {
+  list-style: none;
+  margin-bottom: 32px;
+}
+
+.service-feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: #e2e8f0;
+}
+
+.service-feature img {
+  width: 14px;
+  height: 16px;
+}
+
+.service-button {
+  width: 100%;
+  padding: 18px;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .service-card.popular {
+    transform: none;
+  }
+}

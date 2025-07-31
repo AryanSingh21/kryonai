@@ -1,0 +1,165 @@
+.hero {
+  background: linear-gradient(135deg, #0a0f1b 0%, #1e2a44 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links li {
+  cursor: pointer;
+  font-size: 16px;
+  color: #d1d5db;
+}
+
+.nav-links li:hover {
+  color: #fff;
+}
+
+.try-btn {
+  padding: 8px 16px;
+  background: #1e40af;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+.try-btn:hover {
+  background: #3b82f6;
+}
+
+.hero-title {
+  font-size: 96px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: "Orbitron", sans-serif;
+  color: #e0e7ff;
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  position: relative;
+  z-index: 20;
+}
+
+.hero-title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.2) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.hero-title:hover::after {
+  opacity: 1;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.search-bar input {
+  padding: 12px 20px;
+  width: 400px;
+  max-width: 100%;
+  border: none;
+  border-radius: 25px;
+  background: #1e293b;
+  color: #fff;
+  font-size: 16px;
+}
+
+.search-bar .mic-icon {
+  margin-left: -30px;
+  cursor: pointer;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: #d1d5db;
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.read-btn {
+  padding: 10px 20px;
+  background: #1e40af;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.read-btn:hover {
+  background: #3b82f6;
+}
+
+.smoke-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://www.transparenttextures.com/patterns/smoke.png")
+    repeat;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 48px;
+  }
+  .search-bar input {
+    width: 100%;
+  }
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav-links {
+    flex-direction: column;
+    text-align: center;
+  }
+}
